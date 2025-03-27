@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>租房 - 予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/main-header.js"></script>
+  <script src="/assets/components/main-footer.js"></script>
+</head>
+<body>
+  <main-header />
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <section aria-labelledby="properties-heading" class="mt-8">
+      <h2 id="properties-heading" class="sr-only">
+        Properties
+      </h2>
+
+      <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
+        <a href="/rent/rooms/40067073.html" class="group">
+          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-3 sm:aspect-h-2">
+            <img
+              src="/assets/images/rooms/40067073/01.webp"
+              alt="Beautiful Ocean-Block Home"
+              class="w-full h-full object-center object-cover group-hover:opacity-75 transition duration-200"
+            />
+          </div>
+          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+            <h3>{house.name}</h3>
+            <p>{house.price} 元 / 月</p>
+          </div>
+          <div class="mt-1 flex items-center jusifty-between">
+            <p class="text-sm text-gray-500">{house.location}</p> 
+            <p class="text-sm text-gray-500 ml-2">{house.bedroomNumber}室{house.bathroomNumber}卫</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <nav class="border-t border-gray-200 px-4 flex items-center justify-between sm:px-0 my-4">
+      <div class="-mt-px w-0 flex-1 flex justify-end">
+        <a
+          href="/rent/02.html"
+          class="border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300"
+        >
+          下一页
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-3 h-5 w-5 text-gray-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </main>
+
+  <main-footer />
+</body>
+</html>

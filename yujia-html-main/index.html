@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/main-header.js"></script>
+  <script src="/assets/components/original-header.js"></script>
+  <script src="/assets/components/main-footer.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <main-header />
+  <!--
+  <header-before-login />
+  -->
+
+  <!-- Main -->
+  <main>
+    <!-- Masthead -->
+    <div class="relative bg-gray-900">
+      <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
+        <img
+          src="/assets/images/home-page/masthead.png"
+          alt="Masthead image"
+          class="w-full h-full object-center object-cover"
+        />
+      </div>
+      <div aria-hidden="true" class="absolute inset-0 bg-gray-900 opacity-50"></div>
+
+      <div class="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
+        <h1 class="text-4xl font-extrabold tracking-tight text-white lg:text-6xl">予家</h1>
+        <p class="mt-4 text-xl text-white">
+          老共青租房平台
+        </p>
+        <a
+          href="/rent"
+          class="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 transition duration-200"
+        >
+          开始租房之旅
+        </a>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <section aria-labelledby="category-heading" class="pt-24 sm:pt-32 xl:max-w-7xl xl:mx-auto xl:px-8">
+      <div class="px-4 sm:px-6 sm:flex sm:items-center sm:justify-between lg:px-8 xl:px-0">
+        <h2 id="category-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">
+          按照类型挑选
+        </h2>
+        <a href="/rent/" class="hidden text-sm font-semibold text-blue-600 hover:text-blue-500 sm:block transition duration-200">
+          浏览所有房源<span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+
+      <div class="mt-4 flow-root">
+        <div class="-my-2">
+          <div class="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
+            <div class="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
+              <a
+                href="#"
+                class="relative w-80 h-72 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto transition duration-200"
+              >
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img 
+                    src="/assets/images/home-page/categories/residential-building.jpg" 
+                    alt="Residential building" 
+                    class="w-full h-full object-center object-cover" 
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                ></span>
+                <span class="relative mt-auto text-center text-xl font-bold text-white">居民房</span>
+              </a>
+              <a
+                href="#"
+                class="relative w-80 h-72 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto transition duration-200"
+              >
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img 
+                    src="/assets/images/home-page/categories/apartment.jpg" 
+                    alt="Apartment" 
+                    class="w-full h-full object-center object-cover" 
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                ></span>
+                <span class="relative mt-auto text-center text-xl font-bold text-white">公寓</span>
+              </a>
+              <a
+                href="#"
+                class="relative w-80 h-72 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto transition duration-200"
+              >
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img 
+                    src="/assets/images/home-page/categories/hostel.jpg" 
+                    alt="Hostel" 
+                    class="w-full h-full object-center object-cover" 
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                ></span>
+                <span class="relative mt-auto text-center text-xl font-bold text-white">旅舍</span>
+              </a>
+              <a
+                href="#"
+                class="relative w-80 h-72 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto transition duration-200"
+              >
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img 
+                    src="/assets/images/home-page/categories/loft.jpg" 
+                    alt="Loft" 
+                    class="w-full h-full object-center object-cover" 
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                ></span>
+                <span class="relative mt-auto text-center text-xl font-bold text-white">复式 Loft</span>
+              </a>
+              <a
+                href="#"
+                class="relative w-80 h-72 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto transition duration-200"
+              >
+                <span aria-hidden="true" class="absolute inset-0">
+                  <img 
+                    src="/assets/images/home-page/categories/house.jpg" 
+                    alt="House" 
+                    class="w-full h-full object-center object-cover" 
+                  />
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                ></span>
+                <span class="relative mt-auto text-center text-xl font-bold text-white">花园洋房</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 px-4 sm:hidden">
+        <a href="/rent" class="block text-sm font-semibold text-blue-600 hover:text-blue-500 transition duration-200">
+          浏览所有房源
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      aria-labelledby="social-impact-heading"
+      class="max-w-7xl mx-auto pt-24 px-4 sm:pt-32 sm:px-6 lg:px-8"
+    >
+      <div class="relative rounded-lg overflow-hidden">
+        <div class="absolute inset-0">
+          <img
+            src="/assets/images/home-page/about.jpg"
+            alt="About background image"
+            class="w-full h-full object-center object-cover"
+          />
+        </div>
+        <div class="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
+          <div class="relative max-w-3xl mx-auto flex flex-col items-center text-center">
+            <h2
+              id="social-impact-heading"
+              class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
+            >
+              <span class="block sm:inline">关于</span>
+              <span class="block sm:inline">予家</span>
+            </h2>
+            <p class="mt-3 text-xl text-white">
+              予家是一个老共青租房平台，业务主要面向独自生活的老人和刚刚步入社会的青年人。我们为他们构建了此平台，希望他们可以在享受低房租的同时互相陪伴，创造更美好的明天。
+            </p>
+            <a
+              href="mailto:dabaz.official@skiff.com"
+              class="mt-8 w-full block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto transition duration-200"
+            >
+              联系我们
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Collections -->
+    <section
+      aria-labelledby="collection-heading"
+      class="max-w-xl mx-auto pt-24 px-4 sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <h2 id="collection-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">
+        房源推荐
+      </h2>
+      <p class="mt-4 text-base text-gray-500">
+        优质房源，入住更省心
+      </p>
+
+      <div class="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <a href={house.href} class="group block">
+          <div
+            aria-hidden="true"
+            class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6 transition duration-200"
+          >
+            <img
+              src="/assets/images/rooms/40067073/01.webp"
+              alt="Beautiful Ocean-Block Home"
+              class="w-full h-full object-center object-cover"
+            />
+            <!-- src={imageSrc} alt={imageAlt} or alt={house.name} -->
+          </div>
+          <h3 class="mt-4 text-base font-semibold text-gray-900">{house.name}</h3>
+          <p class="mt-2 text-sm text-gray-500">
+            {house.price} 元 / 月 {house.location}
+          </p>
+        </a>
+        <a href="/rent/rooms/42117045.html" class="group block">
+          <div
+            aria-hidden="true"
+            class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6 transition duration-200"
+          >
+            <img
+              src="/assets/images/rooms/42117045/01.webp"
+              alt="Scotland Beach Retreat"
+              class="w-full h-full object-center object-cover"
+            />
+          </div>
+          <h3 class="mt-4 text-base font-semibold text-gray-900">Scotland Beach Retreat</h3>
+          <p class="mt-2 text-sm text-gray-500">
+            29,788 元 / 月 Ridge, Maryland
+          </p>
+        </a>
+        <a href="/rent/rooms/13923374.html" class="group block">
+          <div
+            aria-hidden="true"
+            class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6 transition duration-200"
+          >
+            <img
+              src="/assets/images/rooms/13923374/01.webp"
+              alt="Chester Riverfront"
+              class="w-full h-full object-center object-cover"
+            />
+          </div>
+          <h3 class="mt-4 text-base font-semibold text-gray-900">Chester Riverfront</h3>
+          <p class="mt-2 text-sm text-gray-500">
+            12,038 元 / 月 Kent Narrows, Maryland
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <main-footer />
+</body>
+</html>

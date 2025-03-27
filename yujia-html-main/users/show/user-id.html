@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[username]的资料</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/header-without-search-bar.js"></script>
+  <script src="/assets/components/main-footer.js"></script>
+</head>
+<body>
+  <header-without-search-bar />
+
+  <main class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6  md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+      <div class="flex items-center space-x-5">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900">你好，我是戴博</h1>
+        </div>
+      </div>
+      
+      <section aria-labelledby="information-title">
+        <div class="bg-white shadow sm:rounded-lg my-6">
+          <div class="px-4 py-5 sm:px-6">
+            <h2 id="information-title" class="text-lg leading-6 font-medium text-gray-900">信息</h2>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">戴博的个人信息</p>
+          </div>
+          <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+            <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">姓名</dt>
+                <dd class="mt-1 text-sm text-gray-900">戴博</dd>
+              </div>
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">毕业院校</dt>
+                <dd class="mt-1 text-sm text-gray-900">Lakeshore Public High School</dd>
+              </div>
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">工作地址</dt>
+                <dd class="mt-1 text-sm text-gray-900">北京市海淀区</dd>
+              </div>
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">籍贯</dt>
+                <dd class="mt-1 text-sm text-gray-900">Detroit, Michigan</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <main-footer />
+</body>
+</html>

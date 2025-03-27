@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{house.name} - 予家</title>
+    <link rel="stylesheet" href="/assets/css/font.css">
+    <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+      module.exports = {
+        theme: {
+          extend: {
+          },
+        },
+        plugins: [
+          require('@tailwindcss/forms'),
+        ],
+      }
+    </script>
+    <script src="/assets/js/dropdown-menu.js"></script>
+    <script src="/assets/components/main-header.js"></script>
+    <script src="/assets/components/header-without-search-bar.js"></script>
+    <script src="/assets/components/main-footer.js"></script>
+  </head>
+<body>
+  <main-header />
+
+  <div class="hidden lg:block fixed top-0 left-0 w-1/2 h-full bg-white" aria-hidden="true"></div>
+  <div class="hidden lg:block fixed top-0 right-0 w-1/2 h-full bg-blue-900" aria-hidden="true"></div>
+
+  <header class="relative max-w-7xl mx-auto bg-blue-900 py-6 lg:bg-transparent lg:grid lg:grid-cols-2 lg:gap-x-16 lg:px-8 lg:pt-16 lg:pb-10">
+    <div class="max-w-2xl mx-auto flex px-4 lg:max-w-lg lg:w-full lg:px-0">
+      <a href="/">
+        <span class="sr-only">Yujia</span>
+        <img src="/assets/images/global/logos/primary-logo.svg" alt="" class="h-8 w-auto">
+      </a>
+    </div>
+  </header>
+
+  <main class="relative grid grid-cols-1 gap-x-16 max-w-7xl mx-auto lg:px-8 lg:grid-cols-2">
+    <h1 class="sr-only">Checkout</h1>
+
+    <section aria-labelledby="summary-heading" class="bg-blue-900 text-blue-300 pt-6 pb-12 md:px-10 lg:max-w-lg lg:w-full lg:mx-auto lg:px-0 lg:pt-0 lg:pb-24 lg:bg-transparent lg:row-start-1 lg:col-start-2">
+      <div class="max-w-2xl mx-auto px-4 lg:max-w-none lg:px-0">
+        <h2 id="summary-heading" class="sr-only">Order summary</h2>
+
+        <dl>
+          <dt class="text-sm font-medium">预计金额</dt>
+          <dd class="mt-1 text-3xl font-extrabold text-white">{orders.rental}+{orders.agencyFee}元</dd>
+        </dl>
+
+        <ul role="list" class="text-sm font-medium divide-y divide-white divide-opacity-10">
+          <li class="flex items-start py-6 space-x-4">
+            <img src="/assets/images/rooms/40067073/01.webp" alt={house.name} class="flex-none w-48 h-48 rounded-md object-center object-cover">
+            <div class="flex-auto space-y-1">
+              <h3 class="text-white text-2xl">{house.name}</h3>
+              <p class="text-xl">{house.location}</p>
+            </div>
+            <p class="flex-none text-lg font-medium text-white">{orders.rental}元</p>
+          </li>
+        </ul>
+
+        <dl class="text-sm font-medium space-y-6 border-t border-white border-opacity-10 pt-6">
+          <div class="flex items-center justify-between">
+            <dt>租金</dt>
+            <dd>{orders.rental}元</dd>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <dt>中介费</dt>
+            <dd>{orders.agencyFee}元</dd>
+          </div>
+
+          <div class="flex items-center justify-between border-t border-white border-opacity-10 text-white pt-6">
+            <dt class="text-base">总和</dt>
+            <dd class="text-base">{orders.rental}+{orders.agencyFee}元</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section aria-labelledby="payment-heading" class="py-16 lg:max-w-lg lg:w-full lg:mx-auto lg:pt-0 lg:pb-24 lg:row-start-1 lg:col-start-1">
+      <h2 id="payment-heading" class="sr-only">Payment details</h2>
+
+      <form>
+        <div class="max-w-2xl mx-auto px-4 lg:max-w-none lg:px-0">
+          <div>
+            <h3 id="contact-info-heading" class="text-lg font-medium text-gray-900">联系信息</h3>
+
+            <div class="mt-6">
+              <label for="phone" class="block text-sm font-medium text-gray-700">手机号</label>
+              <div class="mt-1">
+                <input type="number" id="phone" name="phone" autocomplete="email" class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flex justify-end pt-6 border-t border-gray-200">
+            <button type="submit" class="bg-blue-600 border border-transparent rounded-md shadow-sm py-2 px-4 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-blue-500">下单</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <main-footer />
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[landlordName]的资料</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/host-header.js"></script>
+  <script src="/assets/components/host-footer.js"></script>
+</head>
+<body>
+  <host-header />
+
+  <main class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6  md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+      <div class="flex items-center space-x-5">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900">你好，我是戴博</h1>
+        </div>
+      </div>
+      
+      <section aria-labelledby="information-title">
+        <div class="bg-white shadow sm:rounded-lg my-6">
+          <div class="px-4 py-5 sm:px-6">
+            <h2 id="information-title" class="text-lg leading-6 font-medium text-gray-900">信息</h2>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">戴博的个人信息</p>
+          </div>
+          <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+            <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">姓名</dt>
+                <dd class="mt-1 text-sm text-gray-900">戴博</dd>
+              </div>
+              <div class="sm:col-span-1">
+                <dt class="text-sm font-medium text-gray-500">健康状况</dt>
+                <dd class="mt-1 text-sm text-gray-900">良好</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="applicant-information-title">
+        <div class="bg-white shadow sm:rounded-lg my-6">
+          <div class="px-4 py-5 sm:px-6">
+            <h2 id="applicant-information-title" class="text-lg leading-6 font-medium text-gray-900">房源</h2>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">戴博的所有房源</p>
+          </div>
+          <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+            <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+              <div class="sm:col-span-1">
+                <a href="/rent/rooms/40067073.html" class="group">
+                  <img src="/assets/images/rooms/40067073/01.webp" alt="Beautiful Ocean-Block Home" class="w-full h-auto rounded-lg group-hover:opacity-75 transition duration-200" />
+                  <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                    <h3>Chester Riverfront</h3>
+                    <p>12,038 元 / 月</p>
+                  </div>
+                  <div class="mt-1 flex items-center jusifty-between">
+                    <p class="text-sm text-gray-500">Sussex, Delaware</p> 
+                    <p class="text-sm text-gray-500 ml-2">整租 5室4卫</p>
+                  </div>
+                </a>
+              </div>
+              <div class="sm:col-span-1">
+                <a href="/rent/rooms/42117045.html" class="group">
+                  <img src="/assets/images/rooms/42117045/01.webp" alt="Scotland Beach Retreat" class="w-full h-auto rounded-lg group-hover:opacity-75 transition duration-200" />
+                  <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                    <h3>Scotland Beach Retreat</h3>
+                    <p>29,788 元 / 月</p>
+                  </div>
+                  <div class="mt-1 flex items-center jusifty-between">
+                    <p class="text-sm text-gray-500">Ridge, Maryland</p> 
+                    <p class="text-sm text-gray-500 ml-2">整租 4室4卫</p>
+                  </div>
+                </a>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <host-footer />
+</body>
+</html>

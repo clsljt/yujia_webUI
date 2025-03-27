@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理租客 - 予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+  <script>
+    module.exports = {
+      theme: {
+        extend: {},
+      },
+      plugins: [
+        require('@tailwindcss/aspect-ratio'),
+      ],
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/host-header.js"></script>
+  <script src="/assets/components/host-footer.js"></script>
+</head>
+<body>
+  <host-header />
+
+  <nav class="hidden bg-white border-b border-gray-200 lg:flex" aria-label="Breadcrumb">
+    <ol role="list" class="max-w-screen-xl w-full mx-auto px-4 flex space-x-4 sm:px-6 lg:px-8">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="/host/dashboard/" class="text-sm font-medium text-gray-500 hover:text-gray-700">           
+            控制台
+          </a>
+        </div>
+      </li>
+  
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" preserveAspectRatio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">管理租客</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="max-w-2xl mx-auto py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8" aria-labelledby="order-history-heading">
+    <div class="max-w-xl">
+      <h1 id="order-history-heading" class="text-3xl font-extrabold tracking-tight text-gray-900">管理房源</h1>
+      <p class="mt-2 text-sm text-gray-500">查看房源状态</p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+      <div class="relative">
+        <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
+          <img src="/assets/images/rooms/40067073/01.webp" alt="Beautiful Ocean-Block Home" class="object-center object-cover">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-500">
+          <span class="absolute inset-0"></span>
+          Beautiful Ocean-Block Home
+        </h3>
+        <p class="mt-1 text-lg font-medium">
+          <span class="text-blue-600">在租</span>
+        </p>
+        <p class="mt-1 text-md font-medium">
+          <span class="text-gray-500">订单将于2022年11月20日结束</span>
+        </p>
+        <p class="mt-1 text-md font-medium">
+          <span class="text-gray-500">租客为
+            <a href="/users/show/user-id.html">
+              戴博
+            </a>
+          </span>
+        </p>
+        <div class="flex mt-1 gap-x-2">
+          <a href="/rent/rooms/40067073.html" class="text-base text-blue-500 hover:text-blue-600">
+            查看房源
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
+          <img src="/assets/images/rooms/42117045/01.webp" alt="Scotland Beach Retreat" class="object-center object-cover">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-500">
+          <span class="absolute inset-0"></span>
+          Scotland Beach Retreat
+        </h3>
+        <p class="mt-1 text-lg font-medium">
+          <span class="text-blue-600">在租</span>
+        </p>
+        <p class="mt-1 text-md font-medium">
+          <span class="text-gray-500">订单将于2022年11月25日结束</span>
+        </p>
+        <p class="mt-1 text-md font-medium">
+          <span class="text-gray-500">租客为
+            <a href="/users/show/user-id.html">
+              戴博
+            </a>
+          </span>
+        </p>
+        <div class="flex mt-1 gap-x-2">
+          <a href="/rent/rooms/42117045.html" class="text-base text-blue-500 hover:text-blue-600">
+            查看房源
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
+          <img src="/assets/images/rooms/13923374/01.webp" alt="Chester Riverfront" class="object-center object-cover">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-500">
+          <span class="absolute inset-0"></span>
+          Chester Riverfront
+        </h3>
+        <p class="mt-1 text-lg font-medium">
+          <span class="text-gray-500">未租出</span>
+        </p>
+        <p class="mt-1 text-md font-medium">
+          <span class="text-gray-500">订单于2022年10月20日结束</span>
+        </p>
+        <div class="flex mt-1 gap-x-2">
+          <a href="/rent/rooms/13923374.html" class="text-base text-blue-500 hover:text-blue-600">
+            查看房源
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <host-footer />
+</body>
+</html>

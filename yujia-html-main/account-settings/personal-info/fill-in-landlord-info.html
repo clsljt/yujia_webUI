@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>完善房东信息 - 予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    module.exports = {
+      theme: {
+        extend: {},
+      },
+      plugins: [
+        require('@tailwindcss/forms'),
+      ],
+    }
+  </script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/header-without-search-bar.js"></script>
+  <script src="/assets/components/main-footer.js"></script>
+  <script src="https://kit.fontawesome.com/1b0ccbc99f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header-without-search-bar />
+  
+  <nav class="hidden bg-white border-b border-gray-200 lg:flex" aria-label="Breadcrumb">
+    <ol role="list" class="max-w-screen-xl w-full mx-auto px-4 flex space-x-4 sm:px-6 lg:px-8">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="/account-settings/" class="text-sm font-medium text-gray-500 hover:text-gray-700">           
+            账号
+          </a>
+        </div>
+      </li>
+  
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" preserveAspectRatio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">完善房东信息</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+  
+  <main class="max-w-7xl mx-auto pt-10 pb-12 px-4 lg:pb-16">
+    <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12">
+      <div>
+        <div class="flex">
+          <div>
+            <h1 class="text-lg leading-6 font-medium text-gray-900">房东信息</h1>
+            <p class="mt-1 text-sm text-gray-500">查看及更改您在房东身份下的信息</p>
+          </div>
+          <div class="flex-1"></div>
+          <a href="/account-settings/personal-info/" class="font-bold justify-end text-gray-800 underline underline-offset-2 hover:text-blue-600 transition duration-200">
+            保存
+          </a>
+        </div>
+        <form>
+          <div class="space-y-6">
+            <ul class="editable-info">
+              <li class="mt-4 border-b">
+                <label for="school" class="block text-sm font-medium text-gray-700">健康状况</label>
+                <div class="mt-1 flex">
+                  <input type="number" name="origination" id="origination" class="block w-auto py-2 pr-3 rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="请输入您的健康状况" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <main-footer />
+</body>
+</html>

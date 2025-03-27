@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修改房源信息 - 予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio,forms"></script>
+  <script>
+    module.exports = {
+      theme: {
+        extend: {},
+      },
+      plugins: [
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/forms'),
+      ],
+    }
+  </script>
+  <script>
+    function add() {
+      document.getElementById('cover').style.display = 'block';
+      document.getElementById('add-furnitures').style.display = 'block';
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/host-header.js"></script>
+  <script src="/assets/components/host-footer.js"></script>
+</head>
+<body class="flex flex-col">
+  <!-- Header -->
+  <host-header />
+
+  <div id="cover" class="opacity-75 w-full h-screen bg-black hidden z-40"></div>
+
+  <nav class="hidden bg-white border-b border-gray-200 lg:flex" aria-label="Breadcrumb">
+    <ol role="list" class="max-w-screen-xl w-full mx-auto px-4 flex space-x-4 sm:px-6 lg:px-8">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="/host/dashboard/" class="text-sm font-medium text-gray-500 hover:text-gray-700">           
+            控制台
+          </a>
+        </div>
+      </li>
+  
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" preserveAspectRatio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="/host/dashboard/manage-your-homes/" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">管理房源</a>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" preserveAspectRatio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">修改房源信息</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="max-w-2xl mx-auto py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8" aria-labelledby="homes-heading">
+    <div class="max-w-xl">
+      <h1 id="homes-heading" class="text-3xl font-extrabold tracking-tight text-gray-900">修改房源信息</h1>
+      <p class="mt-2 text-sm text-gray-500">增添设施、修改信息</p>
+    </div>
+
+    <form class="space-y-8 divide-y divide-gray-200 mt-8">
+      <div class="space-y-8 divide-y divide-gray-200">
+        <div>
+          <div>
+            <h3 class="text-lg leading-6 font-medium text-gray-900">照片</h3>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+            <div class="sm:col-span-6">
+              <label class="block text-sm font-medium text-gray-700">
+                封面
+              </label>
+              <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                <div class="space-y-1 text-center">
+                  <svg
+                    class="mx-auto h-12 w-12 text-gray-400"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                      width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="flex text-sm text-gray-600">
+                    <label
+                      class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                    >
+                      <span>上传照片</span>
+                      <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                    </label>
+                    <p class="pl-1">或者将文件拖到此处</p>
+                  </div>
+                  <p class="text-xs text-gray-500">PNG, JPG, GIF 上限10MB</p>
+                </div>
+              </div>
+            </div>
+            <div class="sm:col-span-6">
+              <label class="block text-sm font-medium text-gray-700">
+                更多
+              </label>
+              <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                <div class="space-y-1 text-center">
+                  <svg
+                    class="mx-auto h-12 w-12 text-gray-400"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                      width="2px"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="flex text-sm text-gray-600">
+                    <label
+                      class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                    >
+                      <span>上传照片</span>
+                      <input id="file-upload-2" name="file-upload" type="file" class="sr-only" />
+                    </label>
+                    <p class="pl-1">或者将文件拖到此处</p>
+                  </div>
+                  <p class="text-xs text-gray-500">PNG, JPG, GIF 上限10MB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8">
+          <div>
+            <h3 class="text-lg leading-6 font-medium text-gray-900">基本信息</h3>
+          </div>
+          <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+            <div class="sm:col-span-3">
+              <label class="block text-sm font-medium text-gray-700">
+                月租金
+              </label>
+              <div class="mt-1 flex">
+                <input
+                  type="number"
+                  name="rent"
+                  id="rent"
+                  autocomplete="rent"
+                  placeholder="仅输入数字，单位为元"
+                  class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label class="block text-sm font-medium text-gray-700">
+                面积
+              </label>
+              <div class="mt-1">
+                <input
+                  type="number"
+                  name="area"
+                  id="area"
+                  autocomplete="area"
+                  placeholder="仅输入数字，单位为平方米"
+                  class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label class="block text-sm font-medium text-gray-700">
+                省/市/自治区
+              </label>
+              <div class="mt-1">
+                <select
+                  type="text"
+                  id="location"
+                  name="location"
+                  class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                >
+                  <option>北京市</option>
+                  <option>上海市</option>
+                  <option>河北省</option>
+                  <option>山西省</option>
+                  <option>辽宁省</option>
+                  <option>吉林省</option>
+                  <option>黑龙江省</option>
+                  <option>江苏省</option>
+                  <option>浙江省</option>
+                  <option>安徽省</option>
+                  <option>福建省</option>
+                  <option>江西省</option>
+                  <option>山东省</option>
+                  <option>河南省</option>
+                  <option>湖北省</option>
+                  <option>湖南省</option>
+                  <option>广东省</option>
+                  <option>海南省</option>
+                  <option>四川省</option>
+                  <option>贵州省</option>
+                  <option>云南省</option>
+                  <option>陕西省</option>
+                  <option>甘肃省</option>
+                  <option>青海省</option>
+                  <option>台湾</option>
+                  <option>重庆市</option>
+                  <option>天津市</option>
+                  <option>内蒙古自治区</option>
+                  <option>广西壮族自治区</option>
+                  <option>西藏自治区</option>
+                  <option>宁夏回族自治区</option>
+                  <option>新疆维吾尔自治区</option>
+                  <option>香港特别行政区</option>
+                  <option>澳门特别行政区</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="sm:col-span-6">
+              <label class="block text-sm font-medium text-gray-700">
+                地址
+              </label>
+              <div class="mt-1">
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  autocomplete="address"
+                  class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">
+                卧室数量
+              </label>
+              <select
+                id="bedroomNumber"
+                name="bedroomNumber"
+                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+              >
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-gray-700">
+                卫生间数量
+              </label>
+              <select
+                id="bedroomNumber"
+                name="bedroomNumber"
+                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+              >
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="flex justify-end">
+          <a href="/">
+            <button
+              type="button"
+              class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200"
+            >
+              取消
+            </button>
+          </a>
+          <button
+            type="submit"
+            class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200"
+          >
+            发布
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- End -->
+  </main>
+
+  <host-footer />
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理房源 - 予家</title>
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
+  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+  <script>
+    module.exports = {
+      theme: {
+        extend: {},
+      },
+      plugins: [
+        require('@tailwindcss/aspect-ratio'),
+      ],
+    }
+  </script>
+  <script>
+    function add() {
+      document.getElementById('cover').style.display = 'block';
+      document.getElementById('add-furnitures').style.display = 'block';
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/dropdown-menu.js"></script>
+  <script src="/assets/components/host-header.js"></script>
+  <script src="/assets/components/host-footer.js"></script>
+</head>
+<body class="flex flex-col">
+  <!-- Header -->
+  <host-header />
+
+  <div id="cover" class="opacity-75 w-full h-screen bg-black hidden z-40"></div>
+
+  <nav class="hidden bg-white border-b border-gray-200 lg:flex" aria-label="Breadcrumb">
+    <ol role="list" class="max-w-screen-xl w-full mx-auto px-4 flex space-x-4 sm:px-6 lg:px-8">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="/host/dashboard/" class="text-sm font-medium text-gray-500 hover:text-gray-700">           
+            控制台
+          </a>
+        </div>
+      </li>
+  
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="flex-shrink-0 w-6 h-full text-gray-200" preserveAspectRatio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">管理房源</a>
+        </div>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="max-w-2xl mx-auto py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8" aria-labelledby="homes-heading">
+    <div class="max-w-xl">
+      <h1 id="homes-heading" class="text-3xl font-extrabold tracking-tight text-gray-900">管理房源</h1>
+      <p class="mt-2 text-sm text-gray-500">查看及修改房源的信息</p>
+    </div>
+
+    <!-- Start -->
+    <div class="mt-6 -mb-6 flow-root border-t border-gray-200 divide-y divide-gray-200">
+      <div class="py-6 sm:flex">
+        <div class="flex space-x-4 sm:min-w-0 sm:flex-1 sm:space-x-6 lg:space-x-8">
+          <img src="/assets/images/rooms/40067073/01.webp" alt="Brass puzzle in the shape of a jack with overlapping rounded posts." class="flex-none w-20 h-20 rounded-md object-center object-cover sm:w-48 sm:h-48">
+          <div class="pt-1.5 min-w-0 flex-1 sm:pt-0">
+            <h3 class="text-xl font-bold text-gray-900">
+              <a href="/rent/rooms/40067073.html">{house.name}</a>
+            </h3>
+            <p class="text-md text-gray-500 truncate">
+              <span>{house.location}</span>
+            </p>
+            <p class="text-md text-gray-500 truncate">
+              <span>{house.bedroomNumber}室{house.bathroomNumber}卫</span>
+            </p>
+            <p class="mt-1 font-medium text-gray-900">{house.price} 元 / 月</p>
+          </div>
+        </div>
+        <div class="mt-6 space-y-4 sm:mt-0 sm:ml-6 sm:flex-none sm:w-40">
+          <a href="/host/dashboard/manage-your-homes/edit/{house.id}.html" class="w-full flex items-center justify-center bg-blue-600 py-2 px-2.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-full sm:flex-grow-0 transition duration-200">修改房屋信息</a>
+          <a href="/host/dashboard/manage-your-homes/edit/add-furnitures/{house.id}.html" class="w-full flex items-center justify-center bg-blue-600 py-2 px-2.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-full sm:flex-grow-0 transition duration-200">修改设施信息</a>
+          <button type="button" class="w-full flex items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-full sm:flex-grow-0 transition duration-200">标记为已出租</button>
+        </div>
+      </div>
+    </div>
+    <!-- End -->
+  </main>
+
+  <host-footer />
+</body>
+</html>
